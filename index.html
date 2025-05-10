@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Link external JS -->
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+  <button onclick="button()"> Please Click here for further information</button>
+
+  <br>
+
+  <hr>
+  <p id="one">Taking input from the user and checking whether credentials have been matched or failed. [my Practice work].</p><br>
+  <input id = "text1" type="text" name="Name" placeholder="Enter your Name">
+  </input>
+  <br>
+
+  <input id = "text2" type="password" name="Password" placeholder="Enter your Password"></input>
+  <br>
+  <button onclick="fn1()" id="two">Submit</button>
+  <button onclick="resetFields()">Reset</button>
+  
+
+  <hr>
+
+  <h2>Taking input from the radio buttons.</h2><br>
+  
+  <input id="rd1" name="grp1" type="radio" value="UserName">UserName</input><br>
+  <input id="rd2" name="grp2" type="radio" value="Password">Password</input><br>
+  <button onclick="fn2()">Submit</button>
+  <button onclick="resetRadios()">Reset</button>
+  
+  <br><hr>
+  <h2>Now let's calculate Simple Interest [my Practice work].</h2>
+
+  Enter Principal amount: <input id="p"type="number" name="Principal" placeholder="Principal amount" /><br>
+  Enter Interest Rate: <input id="r"type="number" name="Rate" placeholder="Interest rate" /><br>
+  Enter Time period(in years): <input id="t"type="number" name="Time" placeholder="Time period(in years" /><br>
+  <button onclick="fn3()">Submit</button>
+  <button onclick="resetinterest()">Reset</button>
+  <br><hr>
+
+
+  <h2>Now lets calculate the area of Triangle.[my Practice work].</h2>
+  Enter base (in cm):<input id="base" type="number" name="base"placeholder="Enter base of Triangle"/><br>
+  Enter height(in cm):<input id="height" type="number" name="height" placeholder="Enter height of Triangle "/><br>
+  <button onclick="fn4()">Submit</button>
+  <button onclick="resetri()">Reset</button>
+
+  <br/><hr/>
+
+  <h2>Taking input from Select Box</h2>
+  <select id="selectbox">
+    <option value="Dukkipati">Dukkipati</option>
+    <option value="Lokesh">Lokesh</option>
+    <option value="Naga">Naga</option>
+    <option value="Manikanta">Manikanta</option>
+  </select>
+  <br/><button onclick="fn5()">Submit</button><br/><hr/>
+
+
+  <h2>now let us know about "getElementsByTagName" method.</h2>
+  <h2>By using this method we can access all same type of tags and manipulate them by using JavaScript</h2> 
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  <p>This is paragraph 5.</p><br/>
+  <button onclick="changeStyling()">Submit</button>
+  <br/><hr/>
+
+
+  <h2>now let us know about "getElementByClassName" method.</h2>
+  <h2>The difference between "getElementsByTagName" and "getElementByClassName" is when we choose getElementsByTagName we can only make changes to the particular tag but when it comes to getElementByClassName we can assign an class name to all the different tags to which we want to make the changes. <pre>                           now let us understand it with below example.</pre></h2>
+
+
+  <h1 class="clsname">This is an h1 tag</h1><br/>
+  <p class="clsname">This is an p tag</p><br/>
+  <a class="clsname" href="#">This is an anchor tag</a><br/>
+  <h5 class="clsname">This is an h5 tag</h5><br/>
+  <button onclick="fn6()">Submit</button>
+
+  <br/><hr/>
+
+  <h2>now let us know about changing Image onmouseover and onmouseout events</h2>
+  <img id="img1" onmouseover="newimage()" onmouseout="oldimage()" src="images/google.png" width="250px">
+
+  <br/><hr/>
+
+  <h2>now let us know about "Form Validations".</h2>
+  <form onsubmit="return validate()" action="message.html">
+    Username: <input id="uname" type="text" placeholder="enter username" required/><br/>
+    Password: <input id="pass" type="password" placeholder="enter password" required/><br/>
+    <button ontype="submit">Submit</button>
+  </form>
+  <button onclick="ress()">Reset</button>
+
+  <br/><hr/>
+
+  <h2>now let us know further about "Form Validations" like checking length and showing the place of error in the textbox(adding red border).</h2>
+  <form onsubmit="return validate1()" action="message.html">
+    Username: 
+    <input id="uname1" type="text" placeholder="Enter username"/>
+    <label id="ulabel" style="color: darkred; visibility: hidden;">Invalid Username</label><br/>
+
+    Password: 
+    <input id="pass1" type="password" placeholder="Enter password"/>
+    <label id="plabel" style="color: darkred; visibility: hidden;">Invalid Password</label><br/>
+    <button type="submit">Submit</button>
+  </form>
+  <button onclick="ress1()">Reset</button>
+
+  <br/><hr/>
+
+
+  <h2>now let us know about "Regular Expressions". Regular expressions (RegEx) in JavaScript are patterns used to match character combinations in strings. They're commonly used for searching, validating, extracting, or replacing text.</h2>
+  <ul>
+    <li>using regular expressions we can set any conditions in the inputs from the users like in usernames.</li>
+    <li>If we want some specific pattern in our username then RegEx are very much helpful.</li>
+    <li>If we use the symbol "^" and mention any characters in that then those characters can not be included at that particular sequence. e.g; if we use [^7-9] then in that particular position the numbers 7-9 cannot be present and it shows invalid. <b>The symbol ^ should be placed inside square braces [] then only it works.</b></li>
+    <li>Whenver we place the symbol "^" outside the sqaure braces then it indicates the starting of the expression. e.g; if we use ^[7-9] the starting of the expression must lie between 7-9.</li>
+  </ul>
+  <h4>The below are some of the popular keywords that are used in RegEx</h4>
+  <dl>
+    <dt>\d</dt> <dd>To match any digit (equal to [0-0]).</dd>
+    <dt>\w</dt> <dd>To match any word character (a-z,A-Z,0-9 & _).</dd>
+    <dt>\s</dt> <dd>To match whitespace character (eg - spaces and tabs).</dd>
+    <dt>\t</dt> <dd>To match a tab only.</dd>
+    <dt>^[]</dt><dd>Denotes start the string.</dd>
+    <dt>$</dt>  <dd>Denotes end of the string.</dd>
+    <dt>dot (.)</dt> <dd>When we use dot in our RegEx we can place any thing in that particular place. e.g; if our RegEx is /^a.b$/ any inputs like acb, adb or even a1b will be valid.</dd>
+  </dl>
+
+  <form action="message.html">
+    Username: 
+    <input id="uname3" type="text" placeholder="Enter username"/>
+    <label id="ulabel3" style="color: darkred; visibility: hidden;">Invalid Username</label><br/>
+    <button onclick="val()" type="button">Submit</button>
+  </form>
+
+  <br/><hr/>
+
+  <h2>Mobile Number validation using RegEx.</h2>
+
+  <form>
+    Enter mobile number: <input id="abc" type="text" placeholder="Mobile Number"/>
+    <label id="lab1" style="color: red;visibility: hidden;">Invalid Mobile Number</label><br/>
+    <button onclick="val1()" type="button">Submit</button>
+  </form>
+  <button onclick="re()">Reset</button>
+
+  <br/><hr/>
+
+
+  <h2>Email Validation.</h2>
+
+  <form>
+    Enter E-mail: <input id="email" type="text" placeholder="Email ID"/>
+    <label id="lab2" style="visibility: hidden;">Invalid Email-ID</label><br/>
+    <button onclick="val2()" type="button">Submit</button>
+  </form>
+  <br/>
+  <img src="images/email_validation.png" width="250px"/>
+
+  <br/><hr/>
+
+
+  Input 1: <input type="text" id="txt1" placeholder="Enter text1"/> <br/>
+  Input 2: <input type="text" id="txt2" placeholder="Enter text2"/> <br/>
+  <button onclick="txtadd()">Add</button>
+  <p id="op">Result = </p>
+
+  <br/><hr/>
+
+  <h2>Timing Functions.</h2>
+  <pre>The below are the <b>Methods</b> that are available in Timing Functions.</pre>
+  <dl>
+    <dt>setTimeout()</dt> <dd>This method allows us to  execute statements ONCE after an interval.</dd>
+    <dt>clearTimeout()</dt> <dd>This method clears a timer set with the setTimeout() method.</dd>
+    <dt>setInterval()</dt> <dd>This method allows you to execute statements REPEATEDLY after an interval.</dd>
+    <dt>clearInterval()</dt> <dd>This method clears a timer set with the setInterval() method.</dd>
+  </dl>
+
+  <h3>The below is the example of setTimeout() and clearTimeout() methods.</h3>
+
+  <button onclick="start()">Start</button>
+  <h2 id="timing">Some Random Text.</h2>
+  <button onclick="stop()">Stop</button>
+
+  <hr style="border-top: 5px solid green; width: 1150px;" />
+
+
+  <h3>The below is the example of setInterval() and clearInterval() methods.</h3>
+
+  <button onclick="start1()">Start</button>
+  <h2 id="timing1">Some Random Text.</h2>
+  <button onclick="stop1()">Stop</button>
+
+  <br/><hr/>
+  
+  <h2>Fade-in Fade-out Animations.</h2>
+
+  <button onclick="fadeout()">Fade-out</button><br/><br/>
+  <img id="fading" src="images/google.png" width="500px"><br/><br/>
+  <button onclick="fadein()">Fade-in</button>
+
+  <br/><hr/>
+
+</body>
+</html>
