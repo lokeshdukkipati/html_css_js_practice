@@ -387,7 +387,7 @@ function stop()
 //timing function example [setInterval() and clearTimeout() methods]
 var id1 = 0;
 var seconds = 0;
-function printMsg()
+function printMsg1()
 {
   document.getElementById("timing1").innerHTML = seconds + " seconds have passed after you pressed start button."
   seconds++;
@@ -395,7 +395,7 @@ function printMsg()
 
 function start1()
 {
-  id1 = window.setInterval(printMsg, 1000);
+  id1 = window.setInterval(printMsg1, 1000);
 }
 
 function stop1()
@@ -443,9 +443,51 @@ function show()
 
 function fadeout()
 {
-  intervalId = setInterval(hide,700);
+  intervalId = setInterval(hide,200);
 }
 function fadein()
 {
-  intervalId = setInterval(show, 700);
+  intervalId = setInterval(show, 200);
+}
+
+
+
+//zoom-in and zoom-out animations
+
+var width = 500;
+var difference = 7;
+var intId = 0;
+function increase()
+{
+  clearInterval(intId);
+  intId = setInterval(zoomIn, 20);
+}
+function decrease()
+{
+  clearInterval(intId);
+  intId = setInterval(zoomOut, 20);
+}
+function zoomIn()
+{
+  if(width < 700)
+  {
+    width = width + difference;
+    document.getElementById("zooming").style.width = width + "px";
+  }
+  else
+  {
+    clearInterval(intId);
+  }
+}
+function zoomOut()
+{
+  if(width > 500)
+  {
+    width = width - difference;
+    document.getElementById("zooming").style.width = width + "px";
+  }
+  else
+  {
+    clearInterval(intId);
+  }
 }
