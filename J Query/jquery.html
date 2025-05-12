@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>J Query</title>
+	<style type="text/css">
+		body{
+			background-color: lightcyan;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to J Query Learning Webpage.</h1>
+	<img src="images/jq.png" width="700px"/>
+	<br/><hr/>
+
+
+	<p>To get the features of J Query there are two methods <br/><br/> In first Method We need to download the JS file from "jquery.com" inorder to get library file. (in this case the file will be offline) <br/><br/> In Second Method we use Content Delivery Network (CDN) where we will not be downloading any file but if we want to access this we need to connect to internet.</p>
+	<p>The process for Method 2 Content Delivery Network (CDN) is <br/> first Go to jquery.com website and then Under "Download jQuery" section in website scroll down then we can see "Using jQuery with a CDN" and under that(in 3rd para) we can observe there is a hyperlink "https://code.jquery.com" and after clicking we can see all the CDN's available and from then we can select uncompressed one then we can get the code part and we can directly paste the code from that website to our code.</p>
+
+	<br/><hr/>
+
+
+	<h2>The below text will become faded once you click "Click Me" button.</h2>
+	<p>Fading has been done using J Query Library which simples the writing of code, where we can write the entire code in 1 Line.<br/> In this case we have used fadeToggle() method.</p>
+	<h2 id="heading1">Fading content using fadeToggle().</h2>
+	<button id="btn1" onclick="fn1()">Click Me</button>
+
+
+	<br/><hr/>
+
+	
+</body>
+
+<script src="js/jquery.js"></script>
+<script>
+	function fn1() 
+	{
+		$("#heading1").fadeToggle(2000);
+	}
+</script>
+</html>
